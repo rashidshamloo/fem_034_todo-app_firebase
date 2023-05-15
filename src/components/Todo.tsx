@@ -45,7 +45,6 @@ const Todo = ({
   // change cursor based on y
   useEffect(() => {
     const handleDragStyle = (yPos: number) => {
-      // console.log(yPos);
       if (yPos !== 0) {
         ref.current?.classList.add('pointer-events-none');
         setTimeout(() => {
