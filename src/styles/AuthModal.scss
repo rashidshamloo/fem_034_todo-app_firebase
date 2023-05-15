@@ -1,0 +1,18 @@
+.firebaseui-idp-button {
+  transition: all 500ms;
+  border-radius: 0.5rem;
+  border: 1px solid hsla(0, 0%, 0%, 0);
+  &:hover {
+    border: 1px solid hsla(0, 0%, 0%, 0.5);
+    filter: brightness(85%);
+  }
+  &:focus-visible {
+    outline: 1px solid black;
+  }
+}
+.dark .firebaseui-idp-button {
+  border: 1px solid hsla(0, 0%, 100%, 0);
+  &:hover {
+    border: 1px solid hsla(0, 0%, 100%, 0.5);
+  }
+}

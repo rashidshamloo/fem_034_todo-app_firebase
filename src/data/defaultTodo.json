@@ -1,0 +1,9 @@
+[
+  { "title": "🧽 Wash the dishes", "completed": false },
+  { "title": "💻 Learn React.js", "completed": true },
+  { "title": "👕 Do the laundry", "completed": false },
+  { "title": "🛁 Take a bath", "completed": false },
+  { "title": "🧺 Buy groceries", "completed": true },
+  { "title": "🍚 Prepare lunch", "completed": false },
+  { "title": "🧹 Clean the room", "completed": true }
+]
