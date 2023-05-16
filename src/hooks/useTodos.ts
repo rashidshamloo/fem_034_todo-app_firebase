@@ -203,7 +203,7 @@ const useTodos = () => {
     if (!auth.currentUser?.uid) return;
     const ref = doc(userPrefRef, auth.currentUser.uid);
     try {
-      await setDoc(ref, { darkMode: !darkMode }, { merge: true });
+      await setDoc(ref, { darkMode }, { merge: true });
     } catch (e) {
       console.error(e);
     }
