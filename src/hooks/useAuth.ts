@@ -29,6 +29,7 @@ const useAuth = (onNewUser: () => void) => {
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (!!user) setupAnon.current = false;
       if (!user && setupAnon.current) {
         setupAnon.current = false;
         setupAnonymousUser();
