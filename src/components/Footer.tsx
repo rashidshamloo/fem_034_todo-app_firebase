@@ -43,7 +43,7 @@ const Footer = ({ show, resetTodoList, filter }: footerProps) => {
             className="underline transition-[filter] duration-500 hover:brightness-125"
             onClick={() => resetTodoList(true)}
           >
-            {noHover ? 'Press here' : '"shift+z"'}
+            {noHover ? 'Press here' : '"ctrl+shift+z"'}
           </button>{' '}
           to restore default list
         </p>

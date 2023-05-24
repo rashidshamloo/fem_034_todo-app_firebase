@@ -4,15 +4,17 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Features](#features)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
+- [Front End Mentor - Project 034 - Todo app - with Firebase Integration](#front-end-mentor---project-034---todo-app---with-firebase-integration)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Features](#features)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
 
 ## Overview
 
@@ -52,7 +54,7 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
 - Gradient border for check boxes. (implemented using a background on the main element and a solid color on a child with absolute positioning and inset to make only the border line visible)
 - Add/Plus button for Todo item that shows when the input field is filled and hides when it is empty. (form submit is also only enabled when the input field is filled)
 - Animated remove/cross button for todo items that is hidden by default and only shows on hover on desktop but is always visible on touch devices.
-- Ability to restore the default Todo list on desktop using `shift+z` / click and on mobile by pressing the link (and text hint changes based on which device is showing)
+- Ability to restore the default Todo list on desktop using `ctrl+shift+z` / click and on mobile by pressing the link (and text hint changes based on which device is showing)
 - Todo list with ability to add, remove, reorder, restore default, set as completed or not, and clear completed items
 - Ability to filter list of items shown based on whether they're completed or not. (and different element position for filter select element in mobile vs desktop)
 - Reorder of Todo items using framer motion's `Reorder` component with some improvements (fixed elements getting stuck if clicked while animating to place, added cursor grabbing icon when elements are clicked / held)
