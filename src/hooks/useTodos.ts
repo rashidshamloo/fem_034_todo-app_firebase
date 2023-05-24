@@ -108,7 +108,11 @@ const useTodos = () => {
   const resetTodoList = async (removeTodos = false) => {
     const batch = writeBatch(db);
     // delete current todos from db
-    if (removeTodos) deleteCurrentTodos();
+    if (removeTodos)
+      todoList.forEach((todo) => {
+        const todoRef = doc(todosRef, todo.id);
+        batch.delete(todoRef);
+      });
     // add default todos to db
     defaultTodo.forEach((todo, index) => {
       const newTodoRef = doc(todosRef);

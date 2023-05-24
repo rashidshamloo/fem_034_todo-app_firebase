@@ -19,7 +19,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 interface authModalProps {
   show: boolean;
   setShow: React.Dispatch<React.SetStateAction<boolean>>;
-  resetTodoList: () => void;
+  resetTodoList: (removeTodos?: boolean) => void;
   deleteCurrentTodos: () => void;
   deleteUserPref: (userId: string) => void;
   containerRef: React.RefObject<HTMLDivElement>;

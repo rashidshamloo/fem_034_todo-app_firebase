@@ -47,11 +47,6 @@ const App = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   // handle events
-  const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.ctrlKey && e.shiftKey && e.key === 'Z') {
-      resetTodoList(true);
-    }
-  };
   const handleReorder = (list: todo[]) => {
     ReorderTodos(list);
   };
@@ -62,9 +57,6 @@ const App = () => {
   useEffect(() => {
     // enable transitions after page load
     document.body.classList.remove('[&>div]:!transition-none');
-    // add "ctrl+shift+z" keyDown handler
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   return (

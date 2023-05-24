@@ -1,3 +1,6 @@
+// react
+import { useCallback, useEffect } from 'react';
+
 // framer motion
 import { useRef } from 'react';
 
@@ -23,6 +26,20 @@ const Footer = ({ show, resetTodoList, filter }: footerProps) => {
   const ref = useRef<HTMLParagraphElement>(null);
   const noHover = useMediaQuery({ query: '(hover: none)' });
   const splitLine = useMediaQuery({ query: '(max-width: 450px)' });
+
+  // event handlers
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.ctrlKey && e.shiftKey && e.key === 'Z') {
+      resetTodoList(true);
+    }
+  };
+
+  useEffect(() => {
+    // add "ctrl+shift+z" keyDown handler
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [handleKeyDown]);
+
   return (
     <footer className="mx-8 mt-6 select-none flex-col items-center justify-center text-center text-[14px] sm:mx-auto">
       <div>
